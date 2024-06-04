@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Mis Redes";
+}
+
+<h1 class="text-center mt-4">@ViewData["Title"]</h1>
+
+<div class="container mt-4">
+    <h2 class="text-center">Información de Contacto</h2>
+    <div class="d-flex justify-content-center">
+        <p class="lead text-center bg-light p-3 rounded shadow-sm" style="max-width: 800px;">
+            Si estás interesado en conocer más sobre mi perfil profesional y mis actividades en redes sociales, aquí encontrarás los enlaces a mis perfiles de Facebook, Instagram y LinkedIn. Estos enlaces están destinados a personas interesadas en conocer más sobre mí y mis intereses.
+        </p>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a href="https://www.facebook.com/Nicocai93" class="btn btn-primary m-2" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/nico_miglia25/" class="btn btn-danger m-2" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/nicolas-andres-migliarino-ferro-3a8a6713b/" class="btn btn-primary m-2" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="@Url.Action("Index", "Home")" class="btn btn-outline-secondary btn-lg">
+            <i class="fas fa-arrow-left"></i> Volver a la Página Principal
+        </a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

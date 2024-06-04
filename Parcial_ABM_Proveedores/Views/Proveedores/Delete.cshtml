@@ -1,0 +1,80 @@
+﻿@model Parcial_ABM_Proveedores.Models.Proveedore
+
+@{
+    ViewData["Title"] = "Eliminar Proveedor";
+}
+
+<div class="container mt-4 mb-5">
+    <!-- Agregado el margen inferior -->
+    <h1 class="text-center text-danger">@ViewData["Title"]</h1>
+
+    <h3 class="text-center text-warning">¿Estás seguro de que deseas eliminar este proveedor?</h3>
+    <div class="mt-4">
+        <h4 class="text-primary">Detalles del Proveedor</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Direccion)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Direccion)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Telefono)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Telefono)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Ciudad)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Ciudad)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Pais)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Pais)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.CodigoPostal)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.CodigoPostal)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.FechaRegistro)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Activo)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Activo)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="text-center mt-4">
+                <input type="submit" value="Eliminar" class="btn btn-danger" />
+                <a asp-action="Index" class="btn btn-secondary ml-2">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+﻿@model Parcial_ABM_Proveedores.Models.Proveedore
+
+@{
+    ViewData["Title"] = "Detalles del Proveedor";
+}
+
+<div class="container mt-4 mb-5">
+    <h1 class="text-center text-primary">@ViewData["Title"]</h1>
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4 class="card-title">Información del Proveedor</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Nombre)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Direccion)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Direccion)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Telefono)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Telefono)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Ciudad)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Ciudad)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Pais)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Pais)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.CodigoPostal)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.CodigoPostal)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.FechaRegistro)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.FechaRegistro)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Activo)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Activo)
+                </dd>
+            </dl>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary ml-2">Volver a la lista</a>
+        </div>
+    </div>
+</div>
